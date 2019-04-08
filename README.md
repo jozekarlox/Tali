@@ -1,0 +1,2 @@
+# Tali
+Site Static
