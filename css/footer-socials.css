@@ -14,63 +14,75 @@
 }
 
 .socials li a[href*="fb.me"] {
-	background-image: url("../img/icons/facebook-s.png");
+	background-image: url("../img/icons/facebook-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="fb.me"]:hover {
-	background-image: url("../img/icons/facebook-m.png");
+	background-image: url("../img/icons/facebook-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 
 .socials li a[href*="instagram.com"] {
-	background-image: url("../img/icons/instagram-s.png");
+	background-image: url("../img/icons/instagram-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="instagram.com"]:hover {
-	background-image: url("../img/icons/instagram-m.png");
+	background-image: url("../img/icons/instagram-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="youtube.com"] {
-	background-image: url("../img/icons/youtube-s.png");
+	background-image: url("../img/icons/youtube-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="youtube.com"]:hover {
-	background-image: url("../img/icons/youtube-m.png");
+	background-image: url("../img/icons/youtube-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="linkedin.com"] {
-	background-image: url("../img/icons/linkedin-s.png");
+	background-image: url("../img/icons/linkedin-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="linkedin.com"]:hover {
-	background-image: url("../img/icons/linkedin-m.png");
+	background-image: url("../img/icons/linkedin-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="twitter.com"] {
-	background-image: url("../img/icons/twitter-s.png");
+	background-image: url("../img/icons/twitter-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="twitter.com"]:hover {
-	background-image: url("../img/icons/twitter-m.png");
+	background-image: url("../img/icons/twitter-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="whats.link"] {
-	background-image: url("../img/icons/whatsapp-s.png");
+	background-image: url("../img/icons/whatsapp-s.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
 .socials li a[href*="whats.link"]:hover {
-	background-image: url("../img/icons/whatsapp-m.png");
+	background-image: url("../img/icons/whatsapp-m.svg");
 	background-repeat: no-repeat;
+	background-size: 16px;
 	transition: 0.2s;
 }
