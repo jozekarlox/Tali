@@ -12,13 +12,13 @@ spl_autoload_register(function ($class_name) {
 
 $router = new Router();
 
-$router->on('GET', '/', function () { $loader = new Loader(); $loader->homePage(); });
+$router->on('GET', '/',                 function () { $loader = new Loader(); $loader->homePage(); });
+$router->on('GET', '/negocio',          function () { $loader = new Loader(); $loader->negocioPage(); });
+$router->on('GET', '/governanca',       function () { $loader = new Loader(); $loader->governancaPage(); });
+$router->on('GET', '/sustentabilidade', function () { $loader = new Loader(); $loader->sustentabilidadePage(); });
+$router->on('GET', '/empresa',          function () { $loader = new Loader(); $loader->empresaPage(); });
+$router->on('GET', '/contato',          function () { $loader = new Loader(); $loader->contatoPage(); });
 
-// $router->on('GET', '/home', 'DevMania\App\Controller\Dashboard->loadPage');
-
-
-// $router->on('GET', '/usuario/id/:id/nome/:nome', 'DevMania\App\HeroController->action', ['labels' => false]); // Esse é de teste
-// $router->on('GET', '/:path*', function (HeroController $heroController, $path) { return $heroController->home($path);}); // Esse é de teste
 $router->run($router->method(), $router->uri());
 
 ?>

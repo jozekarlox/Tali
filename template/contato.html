@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Página para entrar em contato com a Tali Brasil"/>
+  <meta name="keywords" content="Tali Brasil, Contato, Formulário, Engenharia, Construção"/>
+  <meta name="copyright" content="© 2019 Tali Brasil"/>
+  <meta name="robots" content="index, follow"/>
+
+  <title>Tali Brasil - Contato</title>
+
+  <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+  {{header}}
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">TALI BRASIL ENGENHARIA</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Uma empresa </h5>
+        </div>
+        <!-- <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div> -->
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m12 l6">
+          <h5>Envie sua mensagem</h5>
+          <p>
+            Entre em contato com a equipe Tali Brasil através do nosso telefone (XX) XXXX-XXXX, ou do nosso e-mail XXXXXX@XXX.XX ou preenchendo o formulário de contato.
+          </p>
+        </div>
+
+        <div class="col s12 m12 l6">
+          <form action="/contato" method="POST">
+            <h5>Formulário de contato</h5>
+            <div class="row">
+              <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name="nome" id="iNome" class="validate" required/>
+                <label for="iNome">Nome</label>
+                <span class="helper-text" data-error="Preencha o nome" data-success="OK"></span>
+              </div>
+        
+              <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">phone</i>
+                <input type="tel" name="tel" id="iTel" class="validate" required/>
+                <label for="iTel">Telefone</label>
+                <span class="helper-text" data-error="Preencha um telefone válido" data-success="OK"></span>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">email</i>
+                <input type="email" name="email" id="iEmail" class="validate" required/>
+                <label for="iEmail">Email</label>
+                <span class="helper-text" data-error="Preencha um email válido" data-success="OK"></span>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <i class="material-icons prefix">subject</i>
+                <input type="text" name="assunto" id="iAssunto" class="validate" required/>
+                <label for="iAssunto">Assunto</label>
+                <span class="helper-text" data-error="Preencha o assunto" data-success="OK"></span>
+              </div>
+            </div>
+      
+            <div class="row">
+              <div class="input-field col s12 m12 l12">
+                <textarea name="mensagem" id="iMensagem" class="materialize-textarea" required></textarea>
+                <label for="iMensagem">Mensagem</label>
+                <span class="helper-text" data-error="Preencha a mensagem" data-success="OK"></span>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col s6 m6 l6">
+                <button class="btn waves-effect waves-light" type="submit">Enviar
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
+  </div> -->
+
+  {{footer}}
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/init.js"></script>
+
+  </body>
+</html>

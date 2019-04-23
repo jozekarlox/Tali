@@ -42,7 +42,9 @@ class Router {
     public function run($method, $uri) {
         $method = strtolower($method);
         if (!isset($this->routes[$method])) {
-            return null;
+            http_response_code(404);
+            include(dirname(__FILE__, 3) . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR . 'erro' . DIRECTORY_SEPARATOR . '404.html');
+            die();
         }
         foreach ($this->routes[$method] as $route => $callback) {
             if (preg_match($route, $uri, $parameters)) {
@@ -50,7 +52,9 @@ class Router {
                 return $this->call($callback, $parameters);
             }
         }
-        return null;
+        http_response_code(404);
+        include(dirname(__FILE__, 3) . DIRECTORY_SEPARATOR . 'template' . DIRECTORY_SEPARATOR . 'erro' . DIRECTORY_SEPARATOR . '404.html');
+        die();
     }
 
     public function call($callback, $parameters) {
