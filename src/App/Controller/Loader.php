@@ -37,18 +37,6 @@ class Loader {
         $this->template->setFile('contato');
         die( $this->template->getFile() );
     }
-
-    public function envioContato() {
-
-        $nome       = isset($_POST['nome'])     ? $_POST['nome']     : false;
-        $tel        = isset($_POST['tel'])      ? $_POST['tel']      : false;
-        $email      = isset($_POST['email'])    ? $_POST['email']    : false;
-        $assunto    = isset($_POST['assunto'])  ? $_POST['assunto']  : false;
-        $msg        = isset($_POST['mensagem']) ? $_POST['mensagem'] : false;
-        $dt_envio   = date('d/m/Y');
-        $hr_envio   = date('H:i:s');
-
-    }
 }
 
 ?>
