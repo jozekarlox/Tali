@@ -1,5 +1,4 @@
 <?php
-// require_once dirname(__FILE__, 2) . DIRECTORY_SEPARATOR . 'Model' . DIRECTORY_SEPARATOR . 'PHPMailer.php';
 
 class Mailer {
 
@@ -9,14 +8,14 @@ class Mailer {
         $this->mailer = new PHPMailer();
         $this->mailer->isSMTP();
         $this->mailer->CharSet      = "UTF-8";
-        $this->mailer->Host         = "*******";
+        $this->mailer->Host         = "XXXXXXXXX";
         $this->mailer->Port         = 587;
         $this->mailer->SMTPAuth     = true;
         $this->mailer->SMTPSecure   = "tls";
-        $this->mailer->Username     = "*******@talibrasilengenharia.com.br";
-        $this->mailer->Password     = "*******";
-        $this->mailer->setFrom("*******@talibrasilengenharia.com.br", "Contato - Site");
-        $this->mailer->addAddress("*******@talibrasilengenharia.com.br");
+        $this->mailer->Username     = "XXXXXXXX@XXXXX.XXX";
+        $this->mailer->Password     = "XXXXXXXX";
+        $this->mailer->setFrom("XXXXXXXX@XXXXX.XXX", "Contato - Site");
+        $this->mailer->addAddress("XXXXXXXX@XXXXX.XXX");
     }
 
     public function loadEmail() {
@@ -32,22 +31,39 @@ class Mailer {
 
         $this->mailer->isHTML(true);
         $this->mailer->Subject = "Contato: " . $email->getAssunto();
-        // Montar html para Body
-        $this->mailer->Body = "Email enviado pelo site no dia ".$email->getData()." às ".$email->getHora().
-                                ". Por ".$email->getNome()." (".$email->getEmail().") - Telefone: ".$email->getTelefone().
-                                "Mensagem: ".$email->getMensagem();
+
+        $view = new Template();
+        $view->setHeader('');
+        $view->setFooter('');
+        $view->setFile('email.email');
+        $view->replace('{{assunto}}', $email->getAssunto());
+        $view->replace('{{email}}', $email->getEmail());
+        $view->replace('{{nome}}', $email->getNome());
+        $view->replace('{{telefone}}', $email->getTelefone());
+        $view->replace('{{data}}', $email->getData());
+        $view->replace('{{hora}}', $email->getHora());
+        $view->replace('{{mensagem}}', $email->getMensagem());
+        
+        $this->mailer->Body = $view->getFile();
         $this->mailer->addReplyTo($email->getEmail(), $email->getNome());
         
-        $this->mailer->SMTPDebug = 3;
-        $this->mailer->Debugoutput = 'html';
+        // $this->mailer->SMTPDebug = 3;
+        // $this->mailer->Debugoutput = 'html';
         $this->mailer->setLanguage('pt');
+
+        $view->setHeader('header');
+        $view->setFooter('footer');
+        $view->setFile('contato');
 
         if (!$this->mailer->send()) {
             error_log("Erro no envio do email: " . $this->mailer->ErrorInfo);
-            echo "Erro no envio do email: " . $this->mailer->ErrorInfo;
+            echo $view->getFile();
+            echo '<div id="overlay" class="erro open"><p>Erro no envio do email. Tente novamente mais tarde.</p><button onclick="fecharOverlay()" type="button">Fechar</button></div>';
         } else {
-            echo "Mensagem enviada";
+            echo $view->getFile();
+            echo '<div id="overlay" class="sucesso open"><p>Email enviado com sucesso</p><button onclick="fecharOverlay()" type="button">Fechar</button></div>';
         }
+        die ();
     }
 }
 
