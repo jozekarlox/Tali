@@ -1,4 +1,6 @@
 <?php
+$inicio = microtime(true);
+
 define('CORE_DIR', dirname(__FILE__, 2).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'Core'.DIRECTORY_SEPARATOR);
 define('CTRL_DIR', dirname(__FILE__, 2).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'App'.DIRECTORY_SEPARATOR.'Controller'.DIRECTORY_SEPARATOR);
 define('VIEW_DIR', dirname(__FILE__, 2).DIRECTORY_SEPARATOR.'src'.DIRECTORY_SEPARATOR.'App'.DIRECTORY_SEPARATOR.'View'.DIRECTORY_SEPARATOR);
@@ -24,4 +26,6 @@ $router->on('POST', '/contato',         function () { $mailer = new Mailer(); $m
 
 $router->run($router->method(), $router->uri());
 
+$total = (microtime(true) - $inicio);
+echo '<script>console.log(' . $total . ')</script>';
 ?>
