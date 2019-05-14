@@ -17,11 +17,13 @@ class Email {
 
     public function setTelefone($telefone) {
         if (!$telefone) throw new Exception('Telefone não informado.');
+        if (!preg_match('/^\(\d{2}\)\s\d{4,5}-\d{4}$/', $telefone)) throw new Exception('Por favor, informe um telefone válido.');
         $this->telefone = $telefone;
     }
 
     public function setEmail($email) {
         if (!$email) throw new Exception('Email não informado.');
+        if (!preg_match("/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/", $email)) throw new Exception(('Por favor, informe um email válido.'));
         $this->email = $email;
     }
 

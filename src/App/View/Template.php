@@ -16,6 +16,24 @@ class Template {
     public function __construct() {}
 
     /**
+     * Localiza header da página
+     * @param header string - Nome do arquivo
+     */
+    public function setHeader($header) {
+        if ($header) $header = $this->setDirectory($header);
+        $this->header = $header.'.html';
+    }
+
+    /**
+     * Localiza footer da página
+     * @param footer string - Nome do arquivo
+     */
+    public function setFooter($footer) {
+        if ($footer) $footer = $this->setDirectory($footer);
+        $this->footer = $footer.'.html';
+    }
+
+    /**
      * Localiza o arquivo
      * @param file string - Nome do arquivo
      */
@@ -31,8 +49,8 @@ class Template {
      * @return string - HTML
      */
     public function getFile() {
-        $this->replace('{{header}}', file_get_contents($this->pathFile.$this->header));
-        $this->replace('{{footer}}', file_get_contents($this->pathFile.$this->footer));
+        if ( is_file($this->pathFile.$this->header) ) $this->replace('{{header}}', file_get_contents($this->pathFile.$this->header));
+        if ( is_file($this->pathFile.$this->footer) ) $this->replace('{{footer}}', file_get_contents($this->pathFile.$this->footer));
         return $this->html;
     }
 

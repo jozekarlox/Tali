@@ -1,0 +1,42 @@
+/* INI OVERLAY */
+
+div#overlay {
+    display: none;
+}
+div#overlay.open {
+    z-index: 10;
+    display: block;
+    padding: 20px;
+    background-color: #103d13;
+    color: #fff;
+    border-left: 3px solid #fff;
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+div#overlay > button {
+    transition: 0.2s;
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #103d13;
+    border: 1px solid #fff;
+    box-shadow: 0px 5px 5px #000;
+    float: right;
+    clear: left;
+}
+div#overlay > button:hover {
+    transition: 0.2s;
+    color: #103d13;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px #000;
+    -ms-transform: translate(0px, 2px); /* IE 9 */
+    -webkit-transform: translate(0px, 2px); /* Safari */
+    transform: translate(0px, 2px);
+}
+
+/* FIM OVERLAY */
