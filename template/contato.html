@@ -13,11 +13,12 @@
 
   <link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/global.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-  
+
   {{header}}
 
   <div id="index-banner" class="parallax-container">
@@ -25,7 +26,7 @@
       <div class="container">
         <br><br>
         <h1 class="header row center teal-text text-lighten-2">CONTATOS</h1>
-        
+
 
         <!-- <div class="row center">
           <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
@@ -34,6 +35,7 @@
     </div>
     <div class="parallax"><img src="img/contato.jpg" alt="contato tali"></div>
   </div>
+	</div>
 
 
   <div class="container">
@@ -47,7 +49,7 @@
         </div>
 
         <div class="col s12 m12 l6">
-          <form action="/contato" method="POST">
+          <form id="formContato" action="/contato" method="POST">
             <h5>Formulário de contato</h5>
             <div class="row">
               <div class="input-field col s12 m6 l6">
@@ -56,7 +58,7 @@
                 <label for="iNome">Nome</label>
                 <span class="helper-text" data-error="Preencha o nome" data-success="OK"></span>
               </div>
-        
+
               <div class="input-field col s12 m6 l6">
                 <i class="material-icons prefix">phone</i>
                 <input type="tel" name="tel" id="iTel" class="validate" required/>
@@ -64,7 +66,7 @@
                 <span class="helper-text" data-error="Preencha um telefone válido" data-success="OK"></span>
               </div>
             </div>
-      
+
             <div class="row">
               <div class="input-field col s12 m12 l12">
                 <i class="material-icons prefix">email</i>
@@ -73,7 +75,7 @@
                 <span class="helper-text" data-error="Preencha um email válido" data-success="OK"></span>
               </div>
             </div>
-      
+
             <div class="row">
               <div class="input-field col s12 m12 l12">
                 <i class="material-icons prefix">subject</i>
@@ -82,15 +84,16 @@
                 <span class="helper-text" data-error="Preencha o assunto" data-success="OK"></span>
               </div>
             </div>
-      
+
             <div class="row">
               <div class="input-field col s12 m12 l12">
                 <textarea name="mensagem" id="iMensagem" class="materialize-textarea" required></textarea>
                 <label for="iMensagem">Mensagem</label>
                 <span class="helper-text" data-error="Preencha a mensagem" data-success="OK"></span>
+
               </div>
             </div>
-    
+
             <div class="row">
               <div class="col s6 m6 l6">
                 <button class="btn waves-effect waves-light" type="submit">Enviar
@@ -105,50 +108,14 @@
     </div>
   </div>
 
-
-  <!-- <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div> -->
-
-
-  <!-- <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="img/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div> -->
-
   {{footer}}
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="/js/materialize.js"></script>
+  <script src="/js/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.min.js"></script>
+  <script src="/js/jquery.mask.js"></script>
   <script src="/js/init.js"></script>
+  <script src="/js/contato.js"></script>
 
   </body>
 </html>
